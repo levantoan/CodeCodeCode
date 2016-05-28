@@ -26,7 +26,7 @@ echo 'Your ID: '.$ipaddress;
 function getLocationByIP($ip = "UNKNOWN",$elements = ''){
 	if($ip != "UNKNOWN"){
 		$xml = simplexml_load_file("http://www.geoplugin.net/xml.gp?ip=".$ip);
-		if ($sxe === false) {
+		if ($xml === false) {
 			return;
 		}else{
 			$onego = '';
